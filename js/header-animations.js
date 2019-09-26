@@ -1,8 +1,61 @@
+// NAVBAR
+(function(d) {
+
+    var
+        mainMenu = d.getElementById('mainMenu'),
+        items = mainMenu.getElementsByTagName('li'),
+        current = mainMenu.getElementsByClassName('current')[0],
+        lastElement = current,
+        /* generate our highlight as DOM element */
+        highlight = d.createElement('span');
+
+    /* set our highlight position */
+    function setHighlight(element) {
+        highlight.style.top = element.offsetTop + 'px';
+        highlight.style.left = element.offsetLeft + 'px';
+        highlight.style.width = element.firstElementChild.clientWidth + 'px';
+        highlight.style.height = element.firstElementChild.clientHeight + 'px';
+        lastElement.classList.remove('over');
+        lastElement = element;
+        element.classList.add('over');
+    }
+
+    /* set initial position BEFORE attaching to DOM */
+    setHighlight(current);
+
+    /* attach it to the DOM before our menu LI */
+    mainMenu.insertBefore(highlight, mainMenu.firstChild);
+
+    /* our over/out events */
+    function overLI(event) {
+        setHighlight(event.currentTarget);
+    }
+
+    function outLI(event) {
+        setHighlight(current);
+    }
+
+    /* now to add the events to all our LI */
+    for (var i = 0, li; li = items[i]; i++) {
+        li.addEventListener('mouseover', overLI, false);
+        li.addEventListener('mouseout', outLI, false);
+    }
+
+    /* readjust it if the window is resized! */
+    window.addEventListener('resize', function(e) {
+        setHighlight(lastElement);
+    }, false);
+
+})(document);
+// END NAVBAR
+
+
+
 // get the element id
-element = document.getElementById("myname");
+nameelement = document.getElementById("myname");
 
 // reset the animation on mouse hover
-element.addEventListener("mouseover", function(myname) {
+nameelement.addEventListener("mouseover", function(myname) {
   myname.preventDefault;
 
   /* this condition enables continuous animation on each mouse hover.
@@ -10,15 +63,15 @@ element.addEventListener("mouseover", function(myname) {
   * I could just remove, because it will be removed  by the way in the next line,
   * but since one day I may want to remove the if, for a 1-time hover animation,
   * I prefer to leave this additional line */
-  if (element.classList.contains("mynameanimation-changed") === true) {
-    element.classList.replace("mynameanimation-changed", "mynameanimation");
+  if (nameelement.classList.contains("mynameanimation-changed") === true) {
+      nameelement.classList.replace("mynameanimation-changed", "mynameanimation");
   }
 
 // remove the animation with slow delay (good only on page load)
-  element.classList.remove("mynameanimation");
+    nameelement.classList.remove("mynameanimation");
 
- void element.offsetWidth;
+ void nameelement.offsetWidth;
 
   // add the class with no delay (good for mouse )
-  element.classList.add("mynameanimation-changed");
+    nameelement.classList.add("mynameanimation-changed");
 }, false);
