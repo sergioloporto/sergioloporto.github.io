@@ -34,7 +34,8 @@ body {
     flex-direction: column;
 }
 h2 {
-    text-align: center;
+    /*text-align: center;*/
+    margin-top: 1em;
 }
 header  {
     height: 10vh;
@@ -45,6 +46,9 @@ header  {
     text-align: center;
     border-top: 1px solid black;
     background-color: #f3f3f3;
+}
+.floatright {
+    float: right;
 }
 .myname {
   margin-top: 18em;
@@ -122,6 +126,15 @@ header  {
       animation-fill-mode: forwards;
       animation-delay: 1.3s;
   }
+    #omnie {
+        height: 50vh;
+    }
+
+    .omnie-child:nth-child(3) {
+        width:57%;
+        min-width:45em;
+        line-height: 1.4em;
+    }
 }
 
 @media (min-width: 435px) and (max-width: 919px) {
@@ -140,6 +153,9 @@ header  {
       animation-fill-mode: forwards;
       animation-delay: 1.3s;
   }
+    #omnie {
+        height: 60vh;
+    }
 }
 @media (max-width: 434px){
   .name-front, .name-end, .name-developer {
@@ -156,6 +172,17 @@ header  {
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-delay: 1.3s;
+    }
+    #omnie {
+        height: 80vh;
+    }
+    .omnie-child:nth-child(-n+2) {
+        text-align:center;
+    }
+
+    .omnie-child:nth-child(3) {
+        text-align:left;
+        max-width: 80%;
     }
 }
 .name-front {
@@ -182,17 +209,29 @@ header  {
   0%   {top: 0em; color:#212529;}
   100% {top: -2em; color:#f400a1;}
 }
-#o-mnie {
-  margin-top: 10em;
-  background-color: grey;
-  height: 100%;
+#omnie {
+    background-color: #fafafa;
+    margin-top: 3.5em;
+    color: #383838;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.omnie-child:nth-child(-n+3) {
+
+}
+.omnie-child:nth-child(3) {
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 #kontakt {
   margin-top: 3em;
 }
 /* PROJECTS */
 #projekty {
-    height: 50vh;
+    /*height: 50vh;*/
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
@@ -297,6 +336,10 @@ header  {
     .flex-item-project1:nth-child(-n+2) {
     width: 95.5%;
     padding: 0.4em;
+    }
+    .omnie-child:nth-child(3) {
+        text-align:left;
+        max-width: 80%;
     }
 }
 /* NEW NAVBAR */
