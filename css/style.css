@@ -43,6 +43,8 @@ header  {
 }
 .aligncenter {
     text-align: center;
+    border-top: 1px solid black;
+    background-color: #f3f3f3;
 }
 .myname {
   margin-top: 18em;
@@ -236,7 +238,7 @@ header  {
     overflow: hidden;
 }
 .panelhover {
-    max-height: 1000px;
+    max-height: 1500px;
     transition: max-height 1.25s ease-in;
 }
 .technologies-used {
@@ -244,9 +246,27 @@ header  {
     font-style: italic;
     font-weight: 600;
 }
-
 /*PROJECTS*/
 /*PROJECT GLAM*/
+.project-name {
+    padding-left: 18px;
+    font-weight: 600;
+    display: block;
+    background-color: #f3f3f3;
+    font-size: 1.1em;
+}
+.projectdescription {
+    padding: 1.2em 0.4em 0.4em;
+
+}
+.projectdescription p {
+    line-height: 24px;
+}
+.projectdescription img {
+    float: left;
+    padding: 10px 18px 18px;
+    width: 45%;
+}
 .project-flexglam-container {
     display: flex;
     flex-flow: row wrap;
@@ -263,8 +283,8 @@ header  {
     height:auto;
 }
 .flex-item-project1:nth-child(3) /* the 3rd item, the yellow one */ {
-    background-color: burlywood;
     width:100%;
+    padding: 0.6em;
 }
 @media all and (max-width: 810px) {
     .project {
@@ -275,7 +295,8 @@ header  {
         flex-flow: column;
     }
     .flex-item-project1:nth-child(-n+2) {
-    width: 95.5max-height%;
+    width: 95.5%;
+    padding: 0.4em;
     }
 }
 /* NEW NAVBAR */
