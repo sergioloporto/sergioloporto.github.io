@@ -3,81 +3,127 @@
 <head>
   <title>Bootstrap Tutorial Sample Page</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0adf3dde3a.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container">
   <header>
-    <nav class="navbar navbar-expand" id="mainnav">
-      <div class="navbar-collapse collapse dual-collapse2 order-1 order-md-0 text-dark">
-          <ul class="navbar-nav ml-left text-center" id="socialMenu">
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fab fa-linkedin"></i></a>
+      <div id="top">
+<!--          <input type="checkbox" id="toggle_mainMenu" hidden>-->
+<!--          <label for="toggle_mainMenu"></label>-->
+          <ul id="mainMenu">
+              <li class="home current">
+                  <a href="/">
+                      <i class="fas fa-home"></i>
+                  </a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fab fa-github-square"></i></a>
+              <li class="">
+                  <a class="" href="#">O mnie</a>
+              </li>
+              <li class="">
+                  <a class="" href="#">Projekty</a>
+              </li>
+              <li class="">
+                  <a class="" href="#">Kursy</a>
+              </li>              <li class="">
+                  <a class="" href="#">Kontakt</a>
+              </li>
+              <li class="social">
+                  <a href="#" title="Facebook">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+              </li>
+              <li>
+                  <a href="#" title="Github">
+                      <i class="fab fa-github-square"></i>
+                  </a>
               </li>
           </ul>
-      </div>
-      <div class="mx-auto my-2 order-0 order-md-1 position-relative">
-          <a class="mx-auto" href="#">
 
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-      <div class="navbar-collapse collapse dual-collapse2">
-<!--          <div class="navbar-collapse collapse dual-collapse2 order-2 order-md-2"  id="mainMenu">-->
-          <ul class="navbar-nav mr-auto text-center" id="mainMenu">
-              <li class="nav-item home current">
-                  <a href="/">&nbsp;<i class="fas fa-home"></i>&nbsp;</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">O mnie</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Projekty</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Kontakt</a>
-              </li>
-          </ul>
-      </div>
-    </nav>
-    <div class="row">
-     <div class="col-2">
-     </div>
-       <div class="col-8">
+          <!-- #top --></div>
+
+  </header>
+    <main>
           <div class="myname">
-            <span class="name-front">Front</span><div id="myname" class="mynameanimation">Sergio Lo Porto</div><span class="name-end">End</span>
+            <span class="name-front">Front</span>
+              <div id="myname" class="mynameanimation">Sergio Lo Porto</div>
+              <span class="name-end">End</span>
           </div>
           <span class="name-developer">Developer</span>
-       </div>
-     <div class="col-2">
-     </div>
-   </div>
-  </header>
-  <main class="main">
-    <div id="o-mnie" class="col-md-6 offset-md-3">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper porta nibh, non tempor sem imperdiet sit amet. Maecenas sed viverra tortor. Nulla et elementum risus, vel mattis erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean condimentum, lorem a ultrices lobortis, orci lacus gravida ante, vel interdum mi neque a dolor. Aliquam erat volutpat. Maecenas at tellus eleifend, aliquet velit in, ullamcorper purus.
-Suspendisse volutpat ut nibh id aliquet. Nunc ac massa quis dui condimentum venenatis. Sed luctus consectetur eros, ut gravida est tincidunt nec. Nam malesuada odio ac iaculis hendrerit. In sed elit nisi. Proin tortor sem, ornare ut fermentum nec, accumsan eget ante. Vivamus tristique finibus nunc, id dignissim sem. Integer dignissim blandit leo, vitae facilisis enim egestas nec. Morbi pharetra varius tincidunt. Vivamus pulvinar mauris quis nulla faucibus, ut congue quam semper. Nullam lacinia ornare velit. Suspendisse sit amet risus pellentesque leo fringilla tristique sit amet feugiat magna. In semper velit et lectus sodales dictum. Nullam vitae quam sit amet enim ornare congue. Nulla id ex vel leo consectetur mattis. Morbi vel augue eu neque viverra congue et a lorem.</p>
+
+
+
+
+    <div id="projekty">
+            <div class="projektychild">
+                <h2>Moje projekty Front-End</h2>
+                <div class="project">
+                     <button class="my-projects-buttons" id="projectbutton">Restyling szablonu Wordpressa + konwersja z XHTML na HTML5 + RWD<i class="fas fa-plus projectplus"></i></button>
+                    <span class="technologies-used">Wordpress, Bootstrap, HTML5, CSS3</span>
+                    <div class="panel project-flexglam-container">
+                        <div class="flex-item-project1">
+                            <a href="img/projects/glam-screen_jamclx/glam-screen_jamclx_c_scale,w_1115.png" target="_blank">
+                                <img src="img/projects/glam-screen_jamclx/glam-screen_jamclx_c_scale,w_385.png" alt="">
+                            </a>
+                            <p class="aligncenter">Strona na początku restylingu <br> <a href="https://web.archive.org/web/20110430161110/http://glamourina.pl/" target="_blank">zobacz tu</a></p>
+                        </div>
+
+                        <div class="flex-item-project1">
+                            <a href="img/projects/glam-screen-new_isjtbb/glam-screen-new_isjtbb_c_scale,w_1115.jpg" target="_blank">
+                                    <img src="img/projects/glam-screen-new_isjtbb/glam-screen-new_isjtbb_c_scale,w_385.jpg" alt="">
+                            </a>
+
+                            <p class="aligncenter">Strona po restylingu <br> <a href="https://glamourina.net" target="_blank">zobacz tu</a></p>
+                        </div>
+
+                        <div class="flex-item-project1">
+                            <p class="aligncenter">Strona po restylingu <br> <a href="https://glamourina.net" target="_blank">zobacz tu</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                        <div class="project">
+                            <button class="my-projects-buttons">Restyling szablonu Wordpressa + konwersja z XHTML na HTML5<i class="fas fa-plus projectplus"></i></button>
+                            <span class="technologies-used">Wordpress, Bootstrap</span>
+                            <div class="panel">
+                                <div class="project-flexglam-description">
+                                    <p><a href="https://web.archive.org/web/20111109105118/http://glamourina.net/">Before</a></p>
+                                    <p>asdfgasdgasdgasd<br>dfgasdgasdgasd<br>dfgasdgasdgasd<br>dfgasdgasdgasd<br>dfgasdgasdgasd<br>dfgasdgasdgasd<br>dfgasdgasdgasd<br></p>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--        <button class="my-projects-buttons">Section 2</button>-->
+<!--        <div class="panel">-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+<!--        </div>-->
+
     </div>
-    <div id="projekty" class="col-md-6 offset-md-3">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper porta nibh, non tempor sem imperdiet sit amet.</p>
-    </div>
-    <div id="kontakt" class="col-md-6 offset-md-3">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper porta nibh, non tempor sem imperdiet sit amet.</p>
-    </div>
+<!--    <div id="kontakt" class="col-md-6 offset-md-3">-->
+<!--      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper porta nibh, non tempor sem imperdiet sit amet.</p>-->
+<!--    </div>-->
   </main>
 
   <footer>
   </footer>
+</div>
   <script src="js/header-animations.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>

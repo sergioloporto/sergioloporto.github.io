@@ -10,7 +10,7 @@
         highlight = d.createElement('span');
 
     /* set our highlight position */
-    function setHighlight(element) {
+        function setHighlight(element) {
         highlight.style.top = element.offsetTop + 'px';
         highlight.style.left = element.offsetLeft + 'px';
         highlight.style.width = element.firstElementChild.clientWidth + 'px';
@@ -18,10 +18,17 @@
         lastElement.classList.remove('over');
         lastElement = element;
         element.classList.add('over');
+        //
+
     }
 
+
+
     /* set initial position BEFORE attaching to DOM */
-    setHighlight(current);
+    setTimeout(() => {
+        setHighlight(current);
+    }, 500);
+
 
     /* attach it to the DOM before our menu LI */
     mainMenu.insertBefore(highlight, mainMenu.firstChild);
