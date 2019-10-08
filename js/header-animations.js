@@ -4,7 +4,7 @@
     var
         mainMenu = d.getElementById('mainMenu'),
         items = mainMenu.getElementsByTagName('li'),
-        current = mainMenu.getElementsByClassName('current')[0],
+        current = mainMenu.getElementsByClassName('main-nav-menu--current')[0],
         lastElement = current,
         /* generate our highlight as DOM element */
         highlight = d.createElement('span');

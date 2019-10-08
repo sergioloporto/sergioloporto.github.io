@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #f400a1;
+}
+
 html,body,address,blockquote,div,
 form,fieldset,caption,
 h1,h2,h3,h4,h5,h6,
@@ -30,12 +34,12 @@ body {
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
-.container {
+.main-container {
     display: flex;
     flex-direction: column;
 }
 h1:before, h1:after {
-    color: #f400a1;
+    color: var(--primary-color);
     font-size: 1.3em;
     padding: 0 0.2em;
     -webkit-animation-name: opacity;
@@ -62,7 +66,7 @@ h2:after {
     display: block;
     content: "";
     margin: 1px auto;
-    border: 2px solid #f400a1;
+    border: 2px solid var(--primary-color);
     border-radius: 48%;
 }
 h3 {
@@ -125,7 +129,7 @@ footer  {
    margin: auto;
    height: 4px;
    width: 0px;
-   background-color: #f400a1;
+   background-color: var(--primary-color);
    -webkit-animation-name: border;
    -webkit-animation-duration: 1.2s;
    -webkit-animation-fill-mode: forwards;
@@ -140,7 +144,7 @@ footer  {
    margin: auto;
    height: 3px;
    width: 0px;
-   background-color: #f400a1;
+   background-color: var(--primary-color);
    -webkit-animation-name: border;
    -webkit-animation-duration: 4s;
    -webkit-animation-fill-mode: forwards;
@@ -266,15 +270,15 @@ footer  {
 }
 @keyframes name-developer-verysmall {
     0%   {top: 0em; color:#212529;}
-    100% {top: -2em; color:#f400a1;}
+    100% {top: -2em; color:var(--primary-color);}
 }
 @keyframes name-developer-435 {
   0%   {top: 0em; color:#212529;}
-  100% {top: -1.4em; color:#f400a1;}
+  100% {top: -1.4em; color:var(--primary-color);}
 }
 @keyframes name-developer-920 {
   0%   {top: 0em; color:#212529;}
-  100% {top: -2em; color:#f400a1;}
+  100% {top: -2em; color:var(--primary-color);}
 }
 #omnie {
     background-color: #fafafa;
@@ -297,7 +301,7 @@ footer  {
 
 }
 .copy {
-    background-color: #f400a1;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
 }
@@ -330,7 +334,7 @@ footer  {
     justify-content: space-between;
 }
 .project {
-    border-color: #f400a1;
+    border-color: var(--primary-color);
     border-style: solid;
     border-width: 4px;
     margin-bottom: 1em;
@@ -386,7 +390,7 @@ footer  {
 .flex-item-project1:nth-child(-n+2) /* the first two elements */ {
     padding: 4px;
     margin: 5px;
-    border: 1px solid #f400a1;
+    border: 1px solid var(--primary-color);
     width:40%;
 }
 .flex-item-project1:nth-child(-n+2) img {
@@ -417,28 +421,27 @@ footer  {
 /* NEW NAVBAR */
 
 
-#mainMenu li {
+.main-nav-menu li {
     list-style:none;
     position:relative; /* depth sort over our highlight */
 }
 
-#mainMenu li a {
+.main-nav-menu li a {
     display: block;
     text-decoration: none;
     color:#777; /* do NOT go brighter than 7F7F7F over white! */
     transition:color 0.5s;
 }
 
-#mainMenu li a:focus,
-#mainMenu li a:hover {
+.main-nav-menu li a:focus,
+.main-nav-menu li a:hover {
     color:#000;
 }
 
-#mainMenu li.over a {
+.main-nav-menu li.over a {
     color:#FFF;
 }
-#mainMenu {
-    /*position:relative;*/
+.main-nav-menu {
     font-size:1.6em;
     line-height:1.375em;
     display: -webkit-flex;
@@ -447,43 +450,43 @@ footer  {
     justify-content: center;
 }
 
-#mainMenu a {
+.main-nav-menu a {
     padding:0.3125em 0.5em;
     white-space: nowrap;
 }
 
-#mainMenu .home a {
+.main-nav-menu .main-nav-menu--home a {
     padding:0.3125em 3em;
 }
 
-#mainMenu > span {
+.main-nav-menu > span {
     position:absolute;
     top:0;
     height:100%;
     left:0;
-    background:#C06;
+    background:var(--primary-color);
     border-radius:1em;
     transition:left 0.5s, width 0.5s;
 }
 @media all and (max-width: 810px) {
 
-    #mainMenu {
+    .main-nav-menu {
         flex-flow: row;
         display: -webkit-flex;
         display: flex;
         flex-wrap: wrap;
     }
 
-    #mainMenu > li {
+    .main-nav-menu > li {
         flex-basis: 100%;
         text-align: center;
     }
-    #mainMenu li .fa-github-square, #mainMenu li .fa-linkedin {
+    .main-nav-menu li .fa-github-square, .main-nav-menu li .fa-linkedin {
         flex-flow: row;
         order: 1;
 
     }
-    main {
+    #projekty {
         margin-top: 65px;
     }
 }

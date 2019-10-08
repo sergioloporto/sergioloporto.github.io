@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Tutorial Sample Page</title>
+  <title>Frontend developer - Sergio Lo Porto</title>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
+<div class="main-container">
   <header>
-      <div id="top">
+      <nav>
 <!--          <input type="checkbox" id="toggle_mainMenu" hidden>-->
 <!--          <label for="toggle_mainMenu"></label>-->
-          <ul id="mainMenu">
-              <li class="home current">
+          <ul id="mainMenu" class="main-nav-menu">
+              <li class="main-nav-menu--home main-nav-menu--current">
                   <a href="/">
                       <i class="fas fa-home"></i>
                   </a>
@@ -27,9 +27,6 @@
               <li>
                   <a href="#projekty">Projekty</a>
               </li>
-<!--              <li class="">-->
-<!--                  <a class="" href="#">Kursy</a>-->
-<!--              </li>              -->
               <li>
                   <a href="#contact">Kontakt</a>
               </li>
@@ -45,10 +42,9 @@
               </li>
           </ul>
 
-          <!-- #top --></div>
-
+      </nav><!-- #top -->
   </header>
-    <main>
+
           <div class="myname">
             <span class="name-front">Front</span>
               <div id="myname" class="mynameanimation">Sergio Lo Porto</div>
@@ -114,7 +110,7 @@
                         </div>
             </div>
     </div>
-  </main>
+
 
   <footer>
       <div id="contact">
