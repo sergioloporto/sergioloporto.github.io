@@ -43,6 +43,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
 h1:before, h1:after {
     color: var(--primary-color);
     font-size: 1.3em;
@@ -457,6 +463,7 @@ footer  {
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .header__main-nav-menu a {
