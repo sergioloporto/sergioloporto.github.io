@@ -433,6 +433,9 @@ footer  {
         max-width: 80%;
     }
 }
+.github-icon-projects::before {
+    font-size: 2em;
+}
 /* NEW NAVBAR */
 
 
