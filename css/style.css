@@ -47,7 +47,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
 }
 h1:before, h1:after {
     color: var(--primary-color);
@@ -90,9 +89,9 @@ h3 {
     50% {opacity:1;}
 }
 header  {
-    height: 10vh;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 footer  {
     height: 170px;
@@ -524,3 +523,16 @@ footer  {
     font-size: 1.2em;
     line-height: 2em;
 }
+
+.fixed{
+    position: fixed;
+}
+
+.bg-white{
+    background-color: white;}
+.z-10{
+    z-index: 10;
+}
+}
+
+

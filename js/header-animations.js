@@ -1,6 +1,5 @@
 // NAVBAR
 (function(d) {
-
     var
         mainMenu = d.getElementById('mainMenu'),
         items = mainMenu.getElementsByTagName('li'),
@@ -11,6 +10,7 @@
 
     /* set our highlight position */
         function setHighlight(element) {
+            console.log(element)
         highlight.style.top = element.offsetTop + 'px';
         highlight.style.left = element.offsetLeft + 'px';
         highlight.style.width = element.firstElementChild.clientWidth + 'px';
@@ -55,7 +55,6 @@
 
 })(document);
 // END NAVBAR
-
 
 
 // get the element id
