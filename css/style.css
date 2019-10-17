@@ -524,15 +524,15 @@ footer  {
     line-height: 2em;
 }
 
-.fixed{
+.fixed {
     position: fixed;
 }
-
-.bg-white{
-    background-color: white;}
-.z-10{
+.bg-white {
+    background-color: white;
+}
+.z-10 {
     z-index: 10;
 }
-}
+
 
 
