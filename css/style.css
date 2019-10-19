@@ -400,6 +400,8 @@ footer  {
 .panelhover {
     max-height: 1500px;
     transition: max-height 1.25s ease-in;
+    display: flex;
+    flex-direction: column;
 }
 .technologies-used {
     padding-left: 18px;
@@ -482,7 +484,10 @@ footer  {
     .myname {
         margin-top:450px;
     }
-}
+}.social {
+    display: flex;
+    justify-content: flex-end;
+ }
 .github-icon-projects::before {
     font-size: 2em;
 }
