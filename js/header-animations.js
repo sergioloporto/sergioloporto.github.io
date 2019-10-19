@@ -10,7 +10,6 @@
 
     /* set our highlight position */
         function setHighlight(element) {
-            console.log(element)
         highlight.style.top = element.offsetTop + 'px';
         highlight.style.left = element.offsetLeft + 'px';
         highlight.style.width = element.firstElementChild.clientWidth + 'px';
@@ -81,3 +80,25 @@ nameelement.addEventListener("mouseover", function(myname) {
   // add the class with no delay (good for mouse )
     nameelement.classList.add("mynameanimation-changed");
 }, false);
+
+
+
+
+//Navbar border
+$(function() {
+    var header = $(".header");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 50) {
+            header.addClass("headershadow");
+        } else {
+            header.removeClass("headershadow");
+        }
+    });
+});
+
+
+
+
+

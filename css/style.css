@@ -48,6 +48,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+.fixed {
+    position: fixed;
+}
+.bg-white {
+    background-color: white;
+}
+.z-10 {
+    z-index: 10;
+}
 h1:before, h1:after {
     color: var(--primary-color);
     font-size: 1.3em;
@@ -88,10 +97,22 @@ h3 {
     0%, 100% {opacity:0;}
     50% {opacity:1;}
 }
-header  {
+.header  {
     display: flex;
     justify-content: center;
     width: 100%;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(139, 139, 139, 0.29);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(139, 139, 139, 0.29);
+    box-shadow: 0px 0px 0px 0px rgba(139, 139, 139, 0.29);
+    transition: box-shadow .5s;
+}
+.headershadow {
+    -webkit-box-shadow: 5px 2px 11px 0px rgba(139, 139, 139, 0.29);
+    -moz-box-shadow: 5px 2px 11px 0px rgba(139, 139, 139, 0.29);
+    box-shadow: 5px 2px 11px 0px rgba(139, 139, 139, 0.29);
+    transition: box-shadow 1s;
+    transition-property: all;
+    transition-duration: 1s;
 }
 footer  {
     height: 170px;
@@ -347,6 +368,9 @@ footer  {
     display: flex;
     justify-content: space-between;
 }
+.my-projects-buttons:hover {
+    background-color: rgba(233, 233, 233, 0.29);
+}
 .project {
     border-color: var(--primary-color);
     border-style: solid;
@@ -361,10 +385,17 @@ footer  {
     flex-direction: row;
     justify-content: right;
 }
+.projectplus:hover {
+    -webkit-animation: fa-spin 1s linear;
+    -moz-animation: fa-spin 1s linear;
+    -o-animation: fa-spin 1s linear;
+    animation: fa-spin 1s linear;
+}
 .panel {
     max-height: 0;
     transition: max-height 1.15s ease-out;
     overflow: hidden;
+    border-top: 1px solid rgba(244, 0, 161, 0.3);
 }
 .panelhover {
     max-height: 1500px;
@@ -416,6 +447,23 @@ footer  {
     padding: 0.6em;
 }
 @media all and (max-width: 810px) {
+    .header__main-nav-menu {
+        flex-flow: row;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header__main-nav-menu > li {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .header__main-nav-menu li .fa-github-square, .header__main-nav-menu li .fa-linkedin {
+        flex-flow: row;
+        order: 1;
+    }
+    #projekty {
+        margin-top: 65px;
+    }
     .project {
         width: 80%;
         min-width: 18em;
@@ -430,6 +478,9 @@ footer  {
     .omnie-child:nth-child(3) {
         text-align:left;
         max-width: 80%;
+    }
+    .myname {
+        margin-top:450px;
     }
 }
 .github-icon-projects::before {
@@ -488,31 +539,13 @@ footer  {
 }
 @media all and (max-width: 810px) {
 
-    .header__main-nav-menu {
-        flex-flow: row;
-        display: -webkit-flex;
-        display: flex;
-        flex-wrap: wrap;
-    }
 
-    .header__main-nav-menu > li {
-        flex-basis: 100%;
-        text-align: center;
-    }
-    .header__main-nav-menu li .fa-github-square, .header__main-nav-menu li .fa-linkedin {
-        flex-flow: row;
-        order: 1;
-
-    }
-    #projekty {
-        margin-top: 65px;
-    }
 }
 #contact {
     background-color: #f3f3f3;
 }
 #contact p i {
-    padding-right: 8px;
+    padding-right: 4px;
     font-size: 1.2em;
 }
 #contact a {
@@ -524,15 +557,6 @@ footer  {
     line-height: 2em;
 }
 
-.fixed {
-    position: fixed;
-}
-.bg-white {
-    background-color: white;
-}
-.z-10 {
-    z-index: 10;
-}
 
 
 
