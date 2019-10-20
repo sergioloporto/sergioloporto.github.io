@@ -21,7 +21,7 @@ img, fieldset {
         text-align:center;
     }
 
-    .omnie-child:nth-child(3) {
+    .omnie-child:nth-child(2) {
         text-align:left;
         max-width: 80%;
     }
@@ -57,7 +57,7 @@ body {
 .z-10 {
     z-index: 10;
 }
-h1:before, h1:after {
+.braces:before, .braces:after {
     color: var(--primary-color);
     font-size: 1.3em;
     padding: 0 0.2em;
@@ -68,25 +68,33 @@ h1:before, h1:after {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-h1:before {
+.braces:before {
     content: '{';
     left: 0;
 }
-h1:after {
+.braces:after {
     content: '}';
     left: 0;
 }
-h2 {
+.braces {
     margin-top: 1em;
     padding-bottom: 0.8em;
 }
-h2:after {
-    width: 50%;
-    display: block;
-    content: "";
-    margin: 1px auto;
-    border: 2px solid var(--primary-color);
-    border-radius: 48%;
+/*h2:after {*/
+/*    width: 50%;*/
+/*    display: block;*/
+/*    content: "";*/
+/*    margin: 1px auto;*/
+/*    border: 2px solid var(--primary-color);*/
+/*    border-radius: 48%;*/
+/*}*/
+.skills-h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.skills-h2:after {
+    border: none;
 }
 h3 {
     margin-top: 1em;
@@ -209,7 +217,7 @@ footer  {
         height: 50vh;
     }
 
-    .omnie-child:nth-child(3) {
+    .omnie-child:nth-child(2) {
         width:57%;
         min-width:45em;
         line-height: 1.4em;
@@ -276,7 +284,7 @@ footer  {
         text-align:center;
     }
 
-    .omnie-child:nth-child(3) {
+    .omnie-child:nth-child(2) {
         text-align:left;
         max-width: 80%;
     }
@@ -325,7 +333,7 @@ footer  {
     width: 100%;
     height: auto;
 }
-.omnie-child:nth-child(3) {
+.omnie-child:nth-child(2) {
     font-size: 1.2em;
     margin-top: 20px;
 }
@@ -428,6 +436,8 @@ footer  {
     float: left;
     padding: 10px 18px 18px;
     width: 45%;
+    box-shadow: 8px 8px 35px -5px rgba(0,0,0,.65);
+    margin: 0 20px 20px;
 }
 .project-flexglam-container {
     display: flex;
@@ -477,20 +487,31 @@ footer  {
     width: 95.5%;
     padding: 0.4em;
     }
-    .omnie-child:nth-child(3) {
+    .omnie-child:nth-child(2) {
         text-align:left;
         max-width: 80%;
     }
     .myname {
         margin-top:450px;
     }
-}.social {
+}.project-social {
     display: flex;
     justify-content: flex-end;
  }
-.github-icon-projects::before {
+.github-icon-projects, .link-icon-projects {
+    color: #444;
+    text-shadow: 2px 3px 2px #e1e1e1
+}
+.github-icon-projects {
     font-size: 2em;
 }
+.link-icon-projects {
+    font-size: 1.8em;
+}
+.link-icon-projects:hover, .github-icon-projects:hover {
+    color: var(--primary-color);
+}
+
 /* NEW NAVBAR */
 
 
@@ -504,6 +525,7 @@ footer  {
     text-decoration: none;
     color:#777; /* do NOT go brighter than 7F7F7F over white! */
     transition:color 0.5s;
+    text-transform: uppercase;
 }
 
 .header__main-nav-menu li a:focus,
@@ -561,7 +583,77 @@ footer  {
     font-size: 1.2em;
     line-height: 2em;
 }
-
-
-
-
+/* Skills */
+/*h1 {*/
+/*    background: rgba(255,255,255,0.8);*/
+/*    box-shadow:0px 1px 10px 2px rgba(0,0,0,0.2);*/
+/*    border-bottom: 3px solid #00bfeb;*/
+/*    font-size: calc(1em + 1vmax);*/
+/*}*/
+.javascript-developer {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 7rem auto;
+}
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    flex-flow: wrap;
+}
+.skills-container__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 15%;
+}
+.skill-icon.html5 {
+    margin: 7px 0 0 1px;
+}.skill-icon.js {
+    margin: 5px 0 0 1px;
+}.skill-icon.css {
+    margin: 8px 0 0 3px;
+}.skill-icon.react {
+    margin: 5px 0 0 1px;
+}
+.counter {
+    display: inline-flex;
+    cursor:pointer;
+    width:100px;
+    height:100px;
+    max-width:100%;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    font-size: calc(1em + 1vmin);
+    transition: height .2s ease-in-out;
+    background: #fff;
+    border-radius:50%;
+    margin:1em 0;
+}
+.percentage {
+    position:absolute;
+    text-align:center;
+    top:50%;
+    left:0;
+    right:0;
+    vertical-align:middle;
+    transform:translate3d(0,-50%,0);
+}
+canvas {
+    position:absolute;
+    top:0;
+    left:0;
+}
+input {
+    width: 200px;
+}
