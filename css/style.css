@@ -513,13 +513,10 @@ footer  {
 }
 
 /* NEW NAVBAR */
-
-
 .header__main-nav-menu li {
     list-style:none;
     position:relative; /* depth sort over our highlight */
 }
-
 .header__main-nav-menu li a {
     display: block;
     text-decoration: none;
