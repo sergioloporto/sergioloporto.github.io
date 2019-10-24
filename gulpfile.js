@@ -69,10 +69,15 @@ const js = function(cb) { //https://github.com/webpack/docs/wiki/usage-with-gulp
 };
 
 const html = function(cb) {
-    return gulp.src('src/html/*.html')
+    return gulp.src(['src/html/*.html', './index.html'])
         .pipe(include())
         .pipe(gulp.dest('dist'))
 };
+// const html = function(cb) {
+//     return gulp.src('src/html/*.html')
+//         .pipe(include())
+//         .pipe(gulp.dest('dist'))
+// };
 
 const htmlReload = function(cb) {
     browserSync.reload();
@@ -82,6 +87,7 @@ const htmlReload = function(cb) {
 const watch = function() {
     gulp.watch("src/scss/**/*.scss", {usePolling : true}, gulp.series(css));
     gulp.watch("src/js/**/*.js", {usePolling : true}, gulp.series(js));
+    gulp.watch("./index.html", {usePolling : true}, gulp.series(html, htmlReload));
     gulp.watch("src/html/**/*.html", {usePolling : true}, gulp.series(html, htmlReload));
 };
 
