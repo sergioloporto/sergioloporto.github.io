@@ -52,6 +52,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .fixed {
     position: fixed;
@@ -143,14 +145,14 @@ footer  {
     width: calc(30% + 1.3em);
 }
 .myname {
-  margin-top: 18em;
+  margin-top: 27rem;
   white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .myname div {
-  font-size: 3.2em;
+  font-size: 5.4em;
   position: relative;
   -webkit-animation: myfirst 2s 2;
   -webkit-animation-direction: normal;
@@ -239,12 +241,9 @@ footer  {
     }
 }
 
-@media (min-width: 435px) and (max-width: 919px) {
+@media /* (min-width: 435px) and */ (max-width: 919px) {
   .name-front, .name-end, .name-developer {
     font-size: 1.1em;
-  }
-  .myname div {
-    font-size: 1.4em;
   }
   .name-developer {
       -webkit-animation: name-developer-435 1s 2;
@@ -266,12 +265,25 @@ footer  {
         text-align: center;
     }
 }
+@media (max-width: 810px) {
+    .myname div {
+        font-size: 4.0em;
+    }
+    .myname {
+        margin-top: 330px;
+    }
+}
+@media (max-width: 660px) {
+    .name-developer, .name-end, .name-front {
+        display: none;
+    }
+}
 @media (max-width: 434px){
   .name-front, .name-end, .name-developer {
     font-size: 0.8em;
   }
   .myname div {
-    font-size: 1.2em;
+    font-size: 2.2em;
   }
     .name-developer {
         -webkit-animation: name-developer-verysmall 1s 2;
@@ -281,6 +293,9 @@ footer  {
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-delay: 1.3s;
+    }
+    .javascript-developer {
+        text-align: center;
     }
     #omnie {
         height: 80vh;
@@ -328,6 +343,11 @@ footer  {
   0%   {top: 0em; color:#212529;}
   100% {top: -2em; color:var(--primary-color);}
 }
+@media (max-width: 660px) {
+    .name-developer, .name-end, .name-front {
+        display: none;
+    }
+}
 #omnie {
     background-color: #fafafa;
     margin-top: 3.5em;
@@ -341,6 +361,7 @@ footer  {
 .omnie-child:nth-child(2) {
     font-size: 1.2em;
     margin-top: 20px;
+    padding: 23px;
 }
 .contact-child:first-child {
 
@@ -352,6 +373,8 @@ footer  {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
 }
 /* PROJECTS */
 #projekty {
@@ -420,11 +443,12 @@ footer  {
     padding-left: 18px;
     font-style: italic;
     font-weight: 600;
+    line-height: 32px;
 }
 /*PROJECTS*/
 /*PROJECT GLAM*/
 .project-name {
-    padding-left: 18px;
+    padding: 11px 18px;
     font-weight: 600;
     display: block;
     background-color: #f3f3f3;
@@ -496,9 +520,7 @@ footer  {
         text-align:left;
         max-width: 80%;
     }
-    .myname {
-        margin-top:450px;
-    }
+
 }.project-social {
     display: flex;
     justify-content: flex-end;
@@ -509,11 +531,12 @@ footer  {
 }
 .github-icon-projects {
     font-size: 2em;
-    transition: 0.7s linear;
+    transition: 0.4s linear;
+
 }
 .link-icon-projects {
     font-size: 1.8em;
-    transition: 0.7s linear;
+    transition: 0.4s linear;
 }
 .link-icon-projects:hover, .github-icon-projects:hover {
     color: var(--primary-color);
@@ -568,9 +591,8 @@ footer  {
     border-radius:1em;
     transition:left 0.5s, width 0.5s;
 }
-@media all and (max-width: 810px) {
-
-
+.header__main-nav-menu i {
+    padding: 0 2.5px;
 }
 #contact {
     background-color: #f3f3f3;

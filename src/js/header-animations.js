@@ -56,6 +56,29 @@
 // END NAVBAR
 
 
+
+//Menu not fixed for small screens
+
+function navBarDisappear() {
+    const navbar = document.querySelector('.header');
+    const media = window.matchMedia(`(max-width: 810px)`);
+    if (media.matches) {
+        navbar.classList.remove('fixed');
+    } else {
+        navbar.classList.add('fixed');
+    }
+}
+navBarDisappear();
+
+window.addEventListener("orientationchange", navBarDisappear);
+
+const time = setInterval(function() {
+    window.addEventListener("resize", navBarDisappear);
+}, 3000);
+
+
+
+//Myname animation
 // get the element id
 nameelement = document.getElementById("myname");
 
