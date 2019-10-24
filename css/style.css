@@ -1,7 +1,9 @@
 :root {
     --primary-color: #f400a1;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 
 ul {
     margin:0;

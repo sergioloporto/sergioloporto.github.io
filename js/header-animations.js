@@ -231,3 +231,4 @@ document.addEventListener("DOMContentLoaded", function() {
         return Math.random() * (max - min) + min;
     }
 });
+
