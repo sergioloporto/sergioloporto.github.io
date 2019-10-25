@@ -109,8 +109,9 @@ const startText = function(cb) {
 };
 
 const deploy = function() {
-    return gulp.src('./dist/**/*').pipe(ghPages());
-}
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+};
 
 
 exports.deploy = deploy;
