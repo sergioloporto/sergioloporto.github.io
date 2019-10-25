@@ -10,6 +10,7 @@ const csso          = require("gulp-csso");
 const browserSync   = require("browser-sync").create();
 const webpack       = require("webpack");
 const include       = require('gulp-include');
+const ghPages = require('gulp-gh-pages');
 
 const showError = function(err) {
     //console.log(err.toString());
@@ -68,16 +69,20 @@ const js = function(cb) { //https://github.com/webpack/docs/wiki/usage-with-gulp
     })
 };
 
-const html = function(cb) {
-    return gulp.src(['src/html/*.html', './index.html'])
-        .pipe(include())
-        .pipe(gulp.dest('dist'))
-};
 // const html = function(cb) {
-//     return gulp.src('src/html/*.html')
+//     return gulp.src(['src/html/*.html', './index.html'])
 //         .pipe(include())
 //         .pipe(gulp.dest('dist'))
 // };
+const html = function(cb) {
+    return gulp.src('src/html/*.html')
+        .pipe(include())
+        .pipe(gulp.dest('dist'))
+};
+
+
+
+
 
 const htmlReload = function(cb) {
     browserSync.reload();
@@ -87,7 +92,7 @@ const htmlReload = function(cb) {
 const watch = function() {
     gulp.watch("src/scss/**/*.scss", {usePolling : true}, gulp.series(css));
     gulp.watch("src/js/**/*.js", {usePolling : true}, gulp.series(js));
-    gulp.watch("./index.html", {usePolling : true}, gulp.series(html, htmlReload));
+    // gulp.watch("./index.html", {usePolling : true}, gulp.series(html, htmlReload));
     gulp.watch("src/html/**/*.html", {usePolling : true}, gulp.series(html, htmlReload));
 };
 
@@ -103,6 +108,12 @@ const startText = function(cb) {
     cb();
 };
 
+const deploy = function() {
+    return gulp.src('./dist/**/*').pipe(ghPages());
+}
+
+
+exports.deploy = deploy;
 exports.default = gulp.series(startText, css, html, js, server, watch);
 exports.css = css;
 exports.watch = watch;
