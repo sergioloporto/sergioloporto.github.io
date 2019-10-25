@@ -74,7 +74,7 @@ window.addEventListener("orientationchange", navBarDisappear);
 
 const time = setInterval(function() {
     window.addEventListener("resize", navBarDisappear);
-}, 3000);
+}, 2000);
 
 
 

@@ -19,7 +19,7 @@ for (i = 0; i < acc.length; i++) {
 // Change the plus/minus fontawesome icons on the projects
 $("button.my-projects-buttons").click(ontop);
 function ontop() {
-    $(this).find("i.projectplus").toggleClass("fa-plus fa-minus");
+    $(this).find("i.projectplus").toggleClass("icon-plus icon-minus");
 }
 
 
@@ -36,3 +36,7 @@ function ontop() {
 //         }
 //     });
 // }
+
+// AOS.init({
+//     duration: 1200
+// });

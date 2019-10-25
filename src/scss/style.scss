@@ -1,5 +1,7 @@
 @import "partials/normalize";
 @import "partials/print";
+@import "fontello";
+
 
 :root {
     --primary-color: #f400a1;
@@ -52,8 +54,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .fixed {
     position: fixed;
@@ -143,6 +145,7 @@ footer  {
 .floatright {
     float: right;
     width: calc(30% + 1.3em);
+    padding-left: 10px;
 }
 .myname {
   margin-top: 27rem;
@@ -233,7 +236,6 @@ footer  {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: #f3f3f3;
     }
     .contact-child {
         padding: 0 2em;
@@ -331,17 +333,17 @@ footer  {
     align-items: center;
     justify-content: center;
 }
-@keyframes name-developer-verysmall {
-    0%   {top: 0em; color:#212529;}
-    100% {top: -2em; color:var(--primary-color);}
-}
+//@keyframes name-developer-verysmall {
+//    0%   {top: 0em; color:#212529;}
+//    100% {top: -2em; color:var(--primary-color);}
+//}
 @keyframes name-developer-435 {
   0%   {top: 0em; color:#212529;}
-  100% {top: -1.4em; color:var(--primary-color);}
+  100% {top: -2.78em; color:var(--primary-color);}
 }
 @keyframes name-developer-920 {
   0%   {top: 0em; color:#212529;}
-  100% {top: -2em; color:var(--primary-color);}
+  100% {top: -2.82em; color:var(--primary-color);}
 }
 @media (max-width: 660px) {
     .name-developer, .name-end, .name-front {
@@ -374,7 +376,7 @@ footer  {
     color: white;
     text-align: center;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 50px;
 }
 /* PROJECTS */
 #projekty {
@@ -420,6 +422,7 @@ footer  {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    padding: 5px;
 }
 .projectplus:hover {
     -webkit-animation: fa-spin 1s linear;
@@ -465,7 +468,7 @@ footer  {
     float: left;
     padding: 10px 18px 18px;
     width: 45%;
-    box-shadow: 8px 8px 35px -5px rgba(0,0,0,.65);
+    box-shadow: 7px 6px 20px -7px rgba(0, 0, 0, 0.40);
     margin: 0 20px 20px;
 }
 .project-flexglam-container {
@@ -591,11 +594,12 @@ footer  {
     border-radius:1em;
     transition:left 0.5s, width 0.5s;
 }
-.header__main-nav-menu i {
-    padding: 0 2.5px;
-}
+//.header__main-nav-menu i {
+//    padding: 0 2.5px;
+//}
 #contact {
     background-color: #f3f3f3;
+    padding: 30px 0;
 }
 #contact p i {
     padding-right: 4px;
@@ -674,12 +678,4 @@ footer  {
     right:0;
     vertical-align:middle;
     transform:translate3d(0,-50%,0);
-}
-canvas {
-    position:absolute;
-    top:0;
-    left:0;
-}
-input {
-    width: 200px;
 }
