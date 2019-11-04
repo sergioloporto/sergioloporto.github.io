@@ -525,25 +525,6 @@ footer  {
         max-width: 80%;
     }
 
-}.project-social {
-    display: flex;
-    justify-content: flex-end;
- }
-.github-icon-projects, .link-icon-projects {
-    color: #444;
-    text-shadow: 2px 3px 2px #e1e1e1
-}
-.github-icon-projects {
-    font-size: 2em;
-    transition: 0.4s linear;
-
-}
-.link-icon-projects {
-    font-size: 1.8em;
-    transition: 0.4s linear;
-}
-.link-icon-projects:hover, .github-icon-projects:hover {
-    color: var(--primary-color);
 }
 
 /* NEW NAVBAR */
