@@ -253,5 +253,24 @@ document.addEventListener("DOMContentLoaded", function() {
     function getRandom(min, max) {
         return Math.random() * (max - min) + min;
     }
+
+
+    /* other skills */
+    const otherSkillsBtn = document.querySelector('.skills-cover button');
+    const otherSkillsBox = document.querySelector('.skills-cover');
+    const skillsCells = document.querySelectorAll('[class^=skill-]');
+    for (i = 0; i < skillsCells.length; i++) {
+        skillsCells[i].style.border = 'none';
+    }
+    if (otherSkillsBtn) {
+        otherSkillsBtn.addEventListener('click', function(){
+            for (i = 0; i < skillsCells.length; i++) {
+                skillsCells[i].style.removeProperty('border');
+            }
+            otherSkillsBox.parentElement.removeChild(otherSkillsBox);
+
+        });
+    }
+
 });
 

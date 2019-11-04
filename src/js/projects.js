@@ -36,7 +36,3 @@ function ontop() {
 //         }
 //     });
 // }
-
-// AOS.init({
-//     duration: 1200
-// });

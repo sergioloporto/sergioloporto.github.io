@@ -469,6 +469,71 @@ template {
 }
 
 /* '' */
+.skills-cover {
+  width: auto;
+  margin: auto;
+  position: absolute;
+  padding: 167px;
+  opacity: 0.9;
+  background: white;
+}
+
+.skills-cover button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 2.9rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: #333333;
+}
+
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+}
+
+.btn::before {
+  background-color: #ffff00;
+  top: -1rem;
+  left: 0rem;
+}
+
+.btn::after {
+  background-color: #f400a1;
+  top: 1rem;
+  left: 8rem;
+}
+
+.btn:hover::before, .btn:hover::after {
+  top: 0;
+  -webkit-transform: skewx(0deg);
+          transform: skewx(0deg);
+}
+
+.btn:hover::after {
+  left: 0rem;
+}
+
+.btn:hover::before {
+  left: 8.75rem;
+}
+
 :root {
   --primary-color: #f400a1;
 }
@@ -1274,6 +1339,51 @@ footer {
   vertical-align: middle;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
+}
+
+/* other skills */
+.other-skills {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 57%;
+  justify-content: center;
+  position: relative;
+}
+
+.other-skills > * {
+  flex: 1 1 240px;
+  margin: 10px;
+}
+
+.other-skills [class^="skill-"] {
+  border: 1px solid #ddd;
+  width: 127px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0 10px;
+}
+
+.other-skills [class^="skill-"]:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: white;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.other-skills svg {
+  height: 80%;
+  margin-right: 5px;
+}
+
+.skill-1 {
+  content: '\f113';
 }
 
 /*# sourceMappingURL=style.min.css.map */

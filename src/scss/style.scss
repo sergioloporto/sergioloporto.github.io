@@ -1,6 +1,7 @@
 @import "partials/normalize";
 @import "partials/print";
 @import "fontello";
+@import "konpa";
 
 
 :root {
@@ -678,4 +679,45 @@ footer  {
     right:0;
     vertical-align:middle;
     transform:translate3d(0,-50%,0);
+}
+/* other skills */
+.other-skills {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 57%;
+    justify-content: center;
+    position: relative;
+}
+.other-skills>* {
+    flex: 1 1 240px;
+    margin: 10px;
+}
+.other-skills [class^="skill-"]{
+    border: 1px solid #ddd;
+    width: 127px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    //box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 10px;
+}
+.other-skills [class^="skill-"]:hover {
+    transform: scale(1.5);
+    background: white;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--primary-color);
+
+}
+.other-skills svg {
+    //width: 100%;
+    height: 80%;
+    margin-right: 5px;
+}
+.skill-1 {
+    content: '\f113';
 }
