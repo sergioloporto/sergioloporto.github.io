@@ -10,7 +10,7 @@ const csso          = require("gulp-csso");
 const browserSync   = require("browser-sync").create();
 const webpack       = require("webpack");
 const include       = require('gulp-include');
-const ghPages = require('gulp-gh-pages');
+// const ghPages = require('gulp-gh-pages');
 
 const showError = function(err) {
     //console.log(err.toString());
@@ -108,13 +108,13 @@ const startText = function(cb) {
     cb();
 };
 
-const deploy = function() {
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages());
-};
+// const deploy = function() {
+//     return gulp.src('./dist/**/*')
+//         .pipe(ghPages());
+// };
 
 
-exports.deploy = deploy;
+// exports.deploy = deploy;
 exports.default = gulp.series(startText, css, html, js, server, watch);
 exports.css = css;
 exports.watch = watch;
