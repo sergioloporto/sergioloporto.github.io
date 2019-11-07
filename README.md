@@ -1,7 +1,9 @@
 ## Live projects on Github
 
-* [Portfolio site](https://sergioloporto.github.io/dist/)
+* [Portfolio Homepage](https://sergioloporto.github.io/dist/)
 * [Selling Platform website](https://sergioloporto.github.io/Selling-Platform/)
+* [Zombie game ](https://github.com/sergioloporto/The-zombie-game---Halloween-Edition/)
+* [NASA Ajax Gallery](https://sergioloporto.github.io/Nasa-API---Ajax-Gallery/)
 
 ## External projects
 
