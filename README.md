@@ -4,6 +4,7 @@
 * [Selling Platform website](https://sergioloporto.github.io/Selling-Platform/)
 * [Zombie game ](https://github.com/sergioloporto/The-zombie-game---Halloween-Edition/)
 * [NASA Ajax Gallery](https://sergioloporto.github.io/Nasa-API---Ajax-Gallery/)
+* [Roll the dice game](https://github.com/sergioloporto/Game---roll-the-dice)
 
 ## External projects
 
