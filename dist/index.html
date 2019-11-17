@@ -2,28 +2,28 @@
 <html lang="pl">
 <head>
   <title>Frontend developer - Sergio Lo Porto</title>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
     <link rel="dns-prefetch" href="https://kit.fontawesome.com">
     <link rel="dns-prefetch" href="https://code.jquery.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!--    <script src="https://kit.fontawesome.com/0adf3dde3a.js" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="manifest" href="img/favicons/site.webmanifest">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
 <div class="main-container">
   <header class="header fixed bg-white z-10">
           <nav class="navbar">
-              <!--Funkcja aktywna w przyszłości
-                        <input type="checkbox" id="toggle_mainMenu" hidden>
-                        <label for="toggle_mainMenu"></label>
-              -->
               <ul id="mainMenu" class="header__main-nav-menu">
                   <li class="header__main-nav-menu--home header__main-nav-menu--current">
                       <a href="/">
@@ -69,10 +69,6 @@
             W październiku / listopadzie uczęszczam na 2-miesięczny intensywny kurs JavaScript i React 434 godziny w Coders Lab.<br>
             Zawsze osiągałem wielkie sukcesy na każdej zajmowanej wcześniej pozycji. Jednak od około 10 lat pracowałem z HTML i CSS i zawsze chciałem być dobrym programistą JavaScript. Teraz podjąłem odważną decyzję, aby głęboko wejść do świata programowania i osiągnąć swój cel, zaczynając od zera. Kurs Coders Lab zakończy się pod koniec listopada 2019. Jestem gotowy rozpocząć nową pracę jako Junior Front-End Developer od 1 grudnia 2019 i zacząć realizować projekty komercyjne, jednocześnie ucząc się krok po kroku, aby zostać ekspertem w niedalekiej przyszłości.
         </p>
-<!--        <img class=floatright src="img/ja.jpg">In September 2019 I decided to gain expertise and become a great front end developer. I started intensively studying programming on a daily basis.<br>-->
-<!--            In October/November I am following a 2 months intensive JavaScript and React 434 hours course at Coders Lab.<br>-->
-<!--            I used to achieve great successes in each position I held before. However since about 10 years I used to work with HTML and CSS, and always wanted to be a good JavaScript programmer. Now I took the brave decision to deep dive and achieve my goal starting from zero. The Coders Lab course will finish in end-November. I am ready to start a new job as a Junior Front-End developer from December 1st and start delivering commercial projects, while learning, step by step to become an expert in few years.-->
-<!--        </p>-->
     </div>
     <section class="skills-wrapper">
         <h1 class="javascript-developer">Javascript: React developer</h1>
@@ -149,6 +145,21 @@
     <div id="projekty">
             <div class="projektychild">
                 <h2 class="braces">Moje projekty Front-End</h2>
+
+                <div class="project"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <span class="project-name">Plan Your Diet App</span>
+                    <button class="my-projects-buttons">Plan your diet. Add your favorite recipes, plan what you will eat and when, and stick to the plan.<i class="icon-plus projectplus"></i></button>
+                    <span class="technologies-used">JavaScript, localStorage, SASS, Gulp</span>
+                    <div class="panel">
+                        <div class="projectdescription">
+                            <p><a href="img/projects/plan-your-diet/planyourdiet.jpg"><img src="img/projects/plan-your-diet/planyourdiet.jpg" alt="" ></a>Projekt rozwijany w ramach <em>Scrum Lab</em> w bootcampie Coders Lab, zgodnie z opisem projektu oraz <em>user stories</em> opisane w Trello. Projekt zrealizowany w ciągu jednego tygodniowego sprinta. Więcej szczegółów nt. podziału pracy w zespole można znaleźć na <a href="https://github.com/sergioloporto/Plan-your-diet" target="_blank">GitHub</a>.
+                            </p>
+                            <p>
+                                Link do galerii -> <a href="https://sergioloporto.github.io/Plan-your-diet/development/" target="_blank">tutaj</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="project"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <span class="project-name">Nasa Mars Gallery</span>
